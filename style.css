@@ -1,0 +1,136 @@
+/* =========================================================
+   1. VARIÁVEIS DE COR E TEMAS (CLARO E ESCURO)
+   ========================================================= */
+:root {
+    /* Modo Escuro (Escuro Cozy) - Padrão */
+    --bg-page: #120c2b;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    
+    --wood-dark: #3a1e05;
+    --wood-medium: #78350f;
+    --wood-light: #d97706;
+    
+    --sunset-orange: #f97316;
+    --sunset-gold: #fbbf24;
+    --purple-night: #1e1b4b;
+    --purple-deep: #312e81;
+    
+    --card-bg: #1e1b4b;
+    --card-border: #000000;
+    
+    --sky-gradient: linear-gradient(180deg, #1e1b4b 0%, #7c2d12 45%, #f97316 80%, #fbbf24 100%);
+    --sun-color: #fef08a;
+    --sun-glow: rgba(254, 240, 138, 0.4);
+}
+
+html:not(.dark) {
+    /* Modo Claro (Daytime Cozy Studio) */
+    --bg-page: #fef3c7;
+    --text-main: #292524;
+    --text-muted: #57534e;
+    
+    --wood-dark: #451a03;
+    --wood-medium: #92400e;
+    --wood-light: #f59e0b;
+    
+    --sunset-orange: #ea580c;
+    --sunset-gold: #d97706;
+    --purple-night: #e0e7ff;
+    --purple-deep: #c7d2fe;
+    
+    --card-bg: #fffbeb;
+    --card-border: #451a03;
+    
+    --sky-gradient: linear-gradient(180deg, #38bdf8 0%, #bae6fd 60%, #fef08a 100%);
+    --sun-color: #facc15;
+    --sun-glow: rgba(250, 204, 21, 0.5);
+}
+
+/* =========================================================
+   2. CONFIGURAÇÕES GERAIS DE TIPOGRAFIA
+   ========================================================= */
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'VT323', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    image-rendering: pixelated;
+}
+
+.font-pixel {
+    font-family: 'Press Start 2P', monospace;
+}
+
+.font-vt {
+    font-family: 'VT323', monospace;
+}
+
+/* =========================================================
+   3. COMPONENTES E BORDAS EM PIXEL ART
+   ========================================================= */
+
+/* Cantos Pixelados */
+.pixel-corners {
+    clip-path: polygon(
+        0 4px, 4px 4px, 4px 0,
+        calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+        100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+        4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
+    );
+}
+
+/* Sombra Pixelada Sólida */
+.pixel-shadow {
+    box-shadow: 6px 6px 0px #000000;
+}
+
+/* Botão Pixelado Interativo */
+.pixel-btn {
+    position: relative;
+    transition: all 0.1s ease;
+    box-shadow: 0 4px 0 #000;
+}
+
+.pixel-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #000;
+}
+
+/* Moldura de Madeira (Placa Hero) */
+.wood-banner {
+    background: linear-gradient(180deg, var(--wood-light) 0%, var(--wood-medium) 40%, var(--wood-dark) 100%);
+    border: 4px solid #000;
+    position: relative;
+}
+
+.wood-banner::before, .wood-banner::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    top: 6px;
+}
+.wood-banner::before { left: 8px; }
+.wood-banner::after { right: 8px; }
+
+/* Janela Pixelada do Estúdio */
+.sky-window {
+    background: var(--sky-gradient);
+    border: 4px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-sun {
+    background-color: var(--sun-color);
+    box-shadow: 0 0 20px var(--sun-glow);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+/* Fundo do Modal em Desfoque */
+.modal-blur {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(2px);
+}

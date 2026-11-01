@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina Web | Transforme Suas Ideias Em Soluções Digitais</title>
+    
+    <!-- ADICIONE ESTA LINHA LOGO ABAIXO DO TITLE: -->
+    <link rel="icon" type="image/png" href="Ícone Neon de Engrenagem com Código.png">
+
+    <!-- Fontes Pixel Art -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Restante dos seus códigos... -->
+    <!-- Fontes Pixel Art -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Arquivo de Estilos Customizados (CSS Separado) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-400 selection:text-black">
+
+    <!-- =========================================================
+         1. CABEÇALHO E NAVEGAÇÃO (HEADER)
+         ========================================================= -->
+    <header class="w-full bg-black/50 border-b-4 border-black py-3 px-4 sticky top-0 z-40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            
+            <!-- Logotipo Oficina Web -->
+            <a href="#" class="flex items-center gap-3">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pixel-logo-icon">
+                    <rect width="40" height="40" rx="4" fill="#050B14"/>
+                    <path d="M16 6H24V10H16V6Z" fill="#F97316"/>
+                    <path d="M16 30H24V34H16V30Z" fill="#F97316"/>
+                    <path d="M6 16H10V24H6V16Z" fill="#F97316"/>
+                    <path d="M30 16H34V24H30V16Z" fill="#F97316"/>
+                    <path d="M9 9H13V13H9V9Z" fill="#EA580C"/>
+                    <path d="M27 9H31V13H27V9Z" fill="#EA580C"/>
+                    <path d="M9 27H13V31H9V27Z" fill="#EA580C"/>
+                    <path d="M27 27H31V31H27V27Z" fill="#EA580C"/>
+                    <rect x="10" y="10" width="20" height="20" fill="#F97316"/>
+                    <rect x="12" y="12" width="16" height="16" fill="#C2410C"/>
+                    <rect x="14" y="14" width="12" height="12" fill="#0F172A"/>
+                    <path d="M16 18L18 20L16 22" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    <path d="M24 18L22 20L24 22" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    <path d="M21 17L19 23" stroke="white" stroke-width="2"/>
+                </svg>
+                <div class="flex items-center gap-2">
+                    <div class="h-6 w-1 bg-amber-500"></div>
+                    <span class="font-pixel text-xs sm:text-sm tracking-wider">
+                        <span class="text-white">Oficina</span> <span class="text-amber-500">Web</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Menu de Navegação -->
+            <nav class="hidden md:flex items-center gap-6 font-pixel text-[10px] text-slate-200">
+                <a href="#servicos" class="hover:text-amber-400 transition-colors">Serviços</a>
+                <a href="#estudio" class="hover:text-amber-400 transition-colors">Estúdio</a>
+                <a href="#sobre" class="hover:text-amber-400 transition-colors">Sobre</a>
+                <a href="#contato" class="hover:text-amber-400 transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Alternar Tema (Claro / Escuro) -->
+            <button id="themeToggle" onclick="toggleTheme()" class="bg-amber-500 hover:bg-amber-400 text-black font-pixel text-[10px] sm:text-xs px-3 py-2 border-2 border-black pixel-corners pixel-btn flex items-center gap-2">
+                <i id="themeIcon" data-lucide="sun" class="w-4 h-4"></i>
+                <span id="themeText" class="hidden sm:inline">MODO CLARO</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         2. CONTEÚDO PRINCIPAL (MAIN)
+         ========================================================= -->
+    <main class="flex-grow max-w-6xl w-full mx-auto p-4 sm:p-6 space-y-12">
+
+        <!-- 2.1 BANNER DE BOAS-VINDAS (HERO BANNER) -->
+        <section class="wood-banner pixel-corners p-6 sm:p-10 text-center pixel-shadow space-y-4">
+            <div class="inline-block bg-black/50 border-2 border-amber-400/60 px-4 py-1 pixel-corners">
+                <span class="font-pixel text-[9px] sm:text-xs text-amber-300 uppercase tracking-widest">
+                    Tecnologia • Criatividade • Resultados
+                </span>
+            </div>
+            
+            <h1 class="font-pixel text-base sm:text-2xl md:text-3xl text-amber-100 leading-snug drop-shadow-[2px_3px_0px_rgba(0,0,0,0.9)] max-w-4xl mx-auto">
+                TRANSFORME SUAS IDEIAS EM SOLUÇÕES DIGITAIS
+            </h1>
+
+            <p class="font-vt text-xl text-amber-200/90 max-w-xl mx-auto">
+                Desenvolvimento de alto desempenho e design sob medida para impulsionar o seu negócio no ambiente digital.
+            </p>
+        </section>
+
+        <!-- 2.2 ESTÚDIO CREATIVO (VITRINE & LOGO) -->
+        <section id="estudio" class="bg-black/30 border-4 border-black p-4 sm:p-6 pixel-corners pixel-shadow relative overflow-hidden" style="background-color: var(--card-bg);">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <!-- Janela Pixel Art Pôr do Sol -->
+                <div class="lg:col-span-7 space-y-3">
+                    <div class="sky-window h-48 sm:h-64 p-4 flex flex-col justify-between pixel-corners">
+                        <div class="flex justify-end">
+                            <div class="pixel-sun w-12 h-12 sm:w-16 sm:h-16"></div>
+                        </div>
+                        <div class="w-full flex items-end justify-between gap-1 opacity-90">
+                            <div class="bg-black w-8 h-20"></div>
+                            <div class="bg-black w-12 h-32"></div>
+                            <div class="bg-black w-10 h-24"></div>
+                            <div class="bg-black w-16 h-36"></div>
+                            <div class="bg-black w-10 h-28"></div>
+                            <div class="bg-black w-14 h-40"></div>
+                            <div class="bg-black w-8 h-20"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel Informativo da Marca Oficina Web -->
+                <div class="lg:col-span-5 space-y-4 flex flex-col justify-center">
+                    <div class="bg-amber-950 border-4 border-amber-700 p-4 pixel-corners text-center border-black">
+                        <div class="font-pixel text-xs text-amber-400 mb-1">INOVAR • CRIAR • CONECTAR</div>
+                        <div class="text-amber-200 text-sm font-vt">Ambiente criativo focado em entregar excelência técnica.</div>
+                    </div>
+
+                    <!-- Card com a Marca Oficina Web -->
+                    <div class="bg-black/50 border-4 border-black p-4 pixel-corners flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="4" fill="#050B14"/>
+                                <path d="M16 6H24V10H16V6Z" fill="#F97316"/>
+                                <path d="M16 30H24V34H16V30Z" fill="#F97316"/>
+                                <path d="M6 16H10V24H6V16Z" fill="#F97316"/>
+                                <path d="M30 16H34V24H30V16Z" fill="#F97316"/>
+                                <path d="M9 9H13V13H9V9Z" fill="#EA580C"/>
+                                <path d="M27 9H31V13H27V9Z" fill="#EA580C"/>
+                                <path d="M9 27H13V31H9V27Z" fill="#EA580C"/>
+                                <path d="M27 27H31V31H27V27Z" fill="#EA580C"/>
+                                <rect x="10" y="10" width="20" height="20" fill="#F97316"/>
+                                <rect x="12" y="12" width="16" height="16" fill="#C2410C"/>
+                                <rect x="14" y="14" width="12" height="12" fill="#0F172A"/>
+                                <path d="M16 18L18 20L16 22" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                <path d="M24 18L22 20L24 22" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                                <path d="M21 17L19 23" stroke="white" stroke-width="2"/>
+                            </svg>
+                            <div class="h-8 w-1 bg-amber-500"></div>
+                            <div>
+                                <div class="font-pixel text-xs text-white">OFICINA <span class="text-amber-400">WEB</span></div>
+                                <div class="text-xs text-slate-300 font-vt">Estúdio Digital &amp; Soluções Tech</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2.3 SEÇÃO DE SERVIÇOS -->
+        <section id="servicos" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="font-pixel text-base sm:text-xl text-amber-400">NOSSOS SERVIÇOS</h2>
+                <p class="font-vt text-xl text-slate-300">Clique em qualquer um dos pilares abaixo para explorar os detalhes:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Currículos Digitais -->
+                <div onclick="openModal('curriculos')" class="bg-black/20 border-4 border-black p-6 pixel-corners pixel-shadow hover:-translate-y-1 transition-transform cursor-pointer flex flex-col justify-between group" style="background-color: var(--card-bg);">
+                    <div class="space-y-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-amber-500/20 border-2 border-black flex items-center justify-center pixel-corners group-hover:bg-amber-400/30 transition-colors">
+                            <i data-lucide="file-badge-2" class="w-8 h-8 text-amber-400"></i>
+                        </div>
+                        <h3 class="font-pixel text-sm sm:text-base text-amber-400">Currículos Digitais</h3>
+                        <p class="font-vt text-lg leading-snug" style="color: var(--text-muted);">
+                            Destaque seu talento e conquiste novas oportunidades com um currículo moderno e interativo.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t-2 border-black/40 text-center">
+                        <span class="font-pixel text-[10px] text-amber-300 group-hover:underline">VER DETALHES +</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sites & Portfólios -->
+                <div onclick="openModal('sites')" class="bg-black/20 border-4 border-black p-6 pixel-corners pixel-shadow hover:-translate-y-1 transition-transform cursor-pointer flex flex-col justify-between group" style="background-color: var(--card-bg);">
+                    <div class="space-y-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-sky-500/20 border-2 border-black flex items-center justify-center pixel-corners group-hover:bg-sky-400/30 transition-colors">
+                            <i data-lucide="globe" class="w-8 h-8 text-sky-400"></i>
+                        </div>
+                        <h3 class="font-pixel text-sm sm:text-base text-sky-400">Sites &amp; Portfólios</h3>
+                        <p class="font-vt text-lg leading-snug" style="color: var(--text-muted);">
+                            Mostre seu trabalho com um site profissional de alta performance, design responsivo e SEO otimizado.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t-2 border-black/40 text-center">
+                        <span class="font-pixel text-[10px] text-sky-300 group-hover:underline">VER DETALHES +</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Soluções Corporativas -->
+                <div onclick="openModal('corporativo')" class="bg-black/20 border-4 border-black p-6 pixel-corners pixel-shadow hover:-translate-y-1 transition-transform cursor-pointer flex flex-col justify-between group" style="background-color: var(--card-bg);">
+                    <div class="space-y-4 text-center">
+                        <div class="w-16 h-16 mx-auto bg-emerald-500/20 border-2 border-black flex items-center justify-center pixel-corners group-hover:bg-emerald-400/30 transition-colors">
+                            <i data-lucide="building-2" class="w-8 h-8 text-emerald-400"></i>
+                        </div>
+                        <h3 class="font-pixel text-sm sm:text-base text-emerald-400">Soluções Corporativas</h3>
+                        <p class="font-vt text-lg leading-snug" style="color: var(--text-muted);">
+                            Tecnologia sob medida para sua empresa crescer com eficiência, automação e sistemas web escaláveis.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t-2 border-black/40 text-center">
+                        <span class="font-pixel text-[10px] text-emerald-300 group-hover:underline">VER DETALHES +</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2.4 SEÇÃO SOBRE A EMPRESA -->
+        <section id="sobre" class="bg-black/40 border-4 border-black p-6 sm:p-8 pixel-corners pixel-shadow space-y-4" style="background-color: var(--card-bg);">
+            <div class="flex items-center gap-3">
+                <span class="font-pixel text-amber-400 text-lg">&gt;</span>
+                <h2 class="font-pixel text-sm sm:text-lg text-amber-400">SOBRE A OFICINA WEB</h2>
+            </div>
+            <p class="font-vt text-xl leading-relaxed" style="color: var(--text-muted);">
+                Combinamos paixão por tecnologia retrô e inovação moderna. Na Oficina Web, construímos ferramentas digitais que unem estética marcante e funcionalidade impecável. Seja para impulsionar a sua carreira individual ou escalar o software da sua empresa, estamos prontos para transformar sua visão em realidade.
+            </p>
+        </section>
+
+        <!-- 2.5 SEÇÃO DE CONTATO (INSTAGRAM) -->
+        <section id="contato" class="bg-black/40 border-4 border-black p-6 sm:p-10 pixel-corners pixel-shadow text-center space-y-6" style="background-color: var(--card-bg);">
+            <div class="inline-block bg-amber-500 text-black font-pixel text-[10px] px-3 py-1 border border-black">
+                FALE CONOSCO
+            </div>
+            
+            <h2 class="font-pixel text-base sm:text-xl text-amber-300 max-w-2xl mx-auto">
+                VAMOS CONVERSAR SOBRE O SEU PRÓXIMO PROJETO?
+            </h2>
+            
+            <p class="font-vt text-xl max-w-xl mx-auto" style="color: var(--text-muted);">
+                Sem burocracia ou formulários complexos. Entre em contato direto com a gente pelo Instagram.
+            </p>
+
+            <div>
+                <!-- Substituído para o link do Instagram (Substitua 'sua_pagina' pelo seu perfil real) -->
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white font-pixel text-xs sm:text-sm px-6 py-4 border-4 border-black pixel-corners pixel-btn">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    VISITAR NOSSO INSTAGRAM
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         3. RODAPÉ (FOOTER)
+         ========================================================= -->
+    <footer class="w-full bg-black border-t-4 border-black py-4 px-4 mt-8">
+        <div class="max-w-6xl mx-auto text-center space-y-2">
+            <div class="wood-banner inline-block px-6 py-2 pixel-corners">
+                <span class="font-pixel text-xs sm:text-sm text-amber-200">
+                    Seu projeto, nossa expertise!
+                </span>
+            </div>
+            <p class="font-vt text-base text-slate-400 pt-2">
+                © 2026 Oficina Web — Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         4. MODAL DETALHADO DE SERVIÇOS
+         ========================================================= -->
+    <div id="serviceModal" class="fixed inset-0 modal-blur z-50 hidden items-center justify-center p-4">
+        <div class="bg-black/95 border-4 border-black max-w-md w-full p-6 pixel-corners pixel-shadow relative space-y-5" style="background-color: var(--card-bg);">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-red-500 hover:bg-red-400 text-black font-pixel text-xs px-2 py-1 border-2 border-black">
+                X
+            </button>
+
+            <div class="space-y-2">
+                <div id="modalBadge" class="inline-block font-pixel text-[9px] px-2 py-1 border border-black text-black bg-amber-400">
+                    DETALHES
+                </div>
+                <h3 id="modalTitle" class="font-pixel text-base text-amber-400"></h3>
+            </div>
+
+            <p id="modalDescription" class="font-vt text-xl leading-relaxed" style="color: var(--text-muted);"></p>
+
+            <ul id="modalFeatures" class="font-vt text-lg space-y-1 text-amber-200"></ul>
+
+            <div class="pt-2">
+                <!-- Botão de orçamento no modal direcionando para o Instagram -->
+                <a id="modalWhatsappBtn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white font-pixel text-xs py-3 border-2 border-black pixel-corners pixel-btn">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    SOLICITAR ORÇAMENTO NO INSTAGRAM
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arquivo de Interatividade (JavaScript Separado) -->
+    <script src="script.js"></script>
+</body>
+</html>
